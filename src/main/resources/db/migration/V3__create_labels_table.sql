@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS labels (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    board_id BIGINT NOT NULL,
+    name VARCHAR(50) NOT NULL,
+    color VARCHAR(7),
+    FOREIGN KEY (board_id) REFERENCES boards(id) ON DELETE CASCADE
+);
